@@ -635,6 +635,7 @@ struct lyd_value_ipv4_prefix {
  */
 struct lyd_value_ipv6_address_no_zone {
     struct in6_addr addr;   /**< IPv6 address in binary */
+    ly_bool dual_stack;     /**< Dual stack IPv6 format or compressed format */
 };
 
 /**
@@ -643,6 +644,7 @@ struct lyd_value_ipv6_address_no_zone {
 struct lyd_value_ipv6_address {
     struct in6_addr addr;   /**< IPv6 address in binary */
     const char *zone;       /**< Optional address zone */
+    ly_bool dual_stack;     /**< Dual stack IPv6 format or compressed format */
 };
 
 /**
@@ -651,6 +653,7 @@ struct lyd_value_ipv6_address {
 struct lyd_value_ipv6_prefix {
     struct in6_addr addr;   /**< IPv6 host address in binary */
     uint8_t prefix;         /**< prefix length (0 - 128) */
+    ly_bool dual_stack;     /**< Dual stack IPv6 format or compressed format */
 };
 
 /**
